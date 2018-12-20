@@ -1,6 +1,6 @@
 package com.example.plainolnotes3;
 /*
-hi updated in github
+hi updated in github from yaser
 */
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
