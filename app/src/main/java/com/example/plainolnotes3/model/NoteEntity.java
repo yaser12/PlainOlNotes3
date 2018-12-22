@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class NoteEntity {
     private  int id;
+    
     private Date date;
     private String text;
 
