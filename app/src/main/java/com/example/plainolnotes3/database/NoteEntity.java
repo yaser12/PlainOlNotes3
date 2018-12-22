@@ -1,4 +1,4 @@
-package com.example.plainolnotes3.model;
+package com.example.plainolnotes3.database;
 
 import java.util.Date;
 
