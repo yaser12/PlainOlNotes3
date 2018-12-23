@@ -7,12 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.plainolnotes3.database.NoteEntity;
 import com.example.plainolnotes3.ui.NotesAdapter;
+import com.example.plainolnotes3.utilities.SampleData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        notesData=SampleData.getNotes();
         ButterKnife.bind(this);
         initRecyclerView();
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -43,11 +46,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 private  void initRecyclerView(){
+    Log.d("Main","start initRecyclerView");
         mRecyclerView.setHasFixedSize(true);
     LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
     mRecyclerView.setLayoutManager(linearLayoutManager);
+
     mAdapter=new NotesAdapter(notesData,this);
     mRecyclerView.setAdapter(mAdapter);
+    Log.d("Main","end initRecyclerView");
 }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
