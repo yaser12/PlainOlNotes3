@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.plainolnotes3.database.NoteEntity;
+import com.example.plainolnotes3.ui.NotesAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.recycler_view)      RecyclerView mRecyclerView;
     private List<NoteEntity> notesData = new ArrayList<>();
+    private NotesAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,8 @@ private  void initRecyclerView(){
         mRecyclerView.setHasFixedSize(true);
     LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
     mRecyclerView.setLayoutManager(linearLayoutManager);
+    mAdapter=new NotesAdapter(notesData,this);
+    mRecyclerView.setAdapter(mAdapter);
 }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
