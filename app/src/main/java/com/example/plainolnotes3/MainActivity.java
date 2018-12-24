@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             Log.i("PlainOlNotes", note.toString());
         }
 
+
+
     }
 private  void initRecyclerView(){
     Log.d("Main","start initRecyclerView");
