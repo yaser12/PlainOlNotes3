@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.plainolnotes3.database.NoteEntity;
+import com.example.plainolnotes3.model.NoteEntity;
 import com.example.plainolnotes3.ui.NotesAdapter;
 import com.example.plainolnotes3.utilities.SampleData;
 
