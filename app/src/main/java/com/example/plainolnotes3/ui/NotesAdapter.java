@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.plainolnotes3.R;
-import com.example.plainolnotes3.database.NoteEntity;
+import com.example.plainolnotes3.model.NoteEntity;
 
 import java.util.List;
 
