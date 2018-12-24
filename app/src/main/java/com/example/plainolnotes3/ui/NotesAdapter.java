@@ -2,6 +2,7 @@ package com.example.plainolnotes3.ui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,9 +20,9 @@ import butterknife.ButterKnife;
 
 public class NotesAdapter extends RecyclerView.Adapter <NotesAdapter.ViewHolder>{
     private final List<NoteEntity> mNotes;
-    private final Context mContext;
+    private final AppCompatActivity mContext;
 
-    public NotesAdapter(List<NoteEntity> mNotes, Context mContext) {
+    public NotesAdapter(List<NoteEntity> mNotes, AppCompatActivity mContext) {
         this.mNotes = mNotes;
         this.mContext = mContext;
         Log.d("NotesAdapter","NotesAdapter,getItemCount="+getItemCount());
@@ -51,11 +52,13 @@ public class NotesAdapter extends RecyclerView.Adapter <NotesAdapter.ViewHolder>
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.note_text)         TextView mtTextView;
+        //@BindView(R.id.note_text)
+        TextView mtTextView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+           // ButterKnife.bind(this,itemView);
+            mtTextView=(TextView)mContext.findViewById(R.id.note_text);
             Log.d("NotesAdapter","ViewHolder");
         }
     }
