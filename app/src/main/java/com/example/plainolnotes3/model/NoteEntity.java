@@ -1,4 +1,4 @@
-package com.example.plainolnotes3.database;
+package com.example.plainolnotes3.model;
 
 import java.util.Date;
 
@@ -12,6 +12,8 @@ public class NoteEntity {
         this.date = date;
 
         this.text = text;
+    }
+    public NoteEntity() {
     }
 
     public NoteEntity(int id, Date date, String text) {
