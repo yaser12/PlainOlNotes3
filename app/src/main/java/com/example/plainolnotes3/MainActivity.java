@@ -24,7 +24,8 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.recycler_view)      RecyclerView mRecyclerView;
+    //@BindView(R.id.recycler_view)
+    RecyclerView mRecyclerView;
     private List<NoteEntity> notesData = new ArrayList<>();
     private NotesAdapter mAdapter;
     @Override
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        mRecyclerView=(RecyclerView)findViewById(R.id.recycler_view);
         ButterKnife.bind(this);
         initRecyclerView();
         FloatingActionButton fab = findViewById(R.id.fab);
