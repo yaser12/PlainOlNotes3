@@ -24,6 +24,7 @@ public class NotesAdapter extends RecyclerView.Adapter <NotesAdapter.ViewHolder>
     public NotesAdapter(List<NoteEntity> mNotes, Context mContext) {
         this.mNotes = mNotes;
         this.mContext = mContext;
+        Log.d("NotesAdapter","NotesAdapter,getItemCount="+getItemCount());
     }
 
     @NonNull
