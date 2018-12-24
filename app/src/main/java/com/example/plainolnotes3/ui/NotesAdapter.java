@@ -41,6 +41,8 @@ public class NotesAdapter extends RecyclerView.Adapter <NotesAdapter.ViewHolder>
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final NoteEntity note=mNotes.get(position);
         holder.mtTextView.setText(note.getText());
+        Log.d("NotesAdapter","onBindViewHolder,getItemCount="+getItemCount());
+
     }
 
     @Override
@@ -54,6 +56,7 @@ public class NotesAdapter extends RecyclerView.Adapter <NotesAdapter.ViewHolder>
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
+            Log.d("NotesAdapter","ViewHolder");
         }
     }
 }
