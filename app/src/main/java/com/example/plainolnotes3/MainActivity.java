@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mRecyclerView=(RecyclerView)findViewById(R.id.recycler_view);
         ButterKnife.bind(this);
-        initRecyclerView();
+    //    initRecyclerView();
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 notesData) {
             Log.i("PlainOlNotes", note.toString());
         }
+        initRecyclerView();
+
     }
 private  void initRecyclerView(){
     Log.d("Main","start initRecyclerView");
