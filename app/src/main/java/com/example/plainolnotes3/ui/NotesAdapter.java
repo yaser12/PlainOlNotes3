@@ -1,6 +1,5 @@
 package com.example.plainolnotes3.ui;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.plainolnotes3.R;
-import com.example.plainolnotes3.model.NoteEntity;
+import com.example.plainolnotes3.database.NoteEntity;
 
 import java.util.List;
 
