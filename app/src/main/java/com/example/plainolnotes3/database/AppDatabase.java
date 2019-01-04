@@ -3,11 +3,12 @@ package com.example.plainolnotes3.database;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
-import android.arch.persistence.room.TypeConverter;
+
+import android.arch.persistence.room.TypeConverters;
 import android.content.Context;
 
 @Database(entities = {NoteEntity.class},version = 1)
-@TypeConverter(DateConverter.class)
+@TypeConverters(DateConverter.class)
 public abstract class AppDatabase extends RoomDatabase {
     public static final String DATABASE_NAME = "AppDatabase.dba";
     private static volatile AppDatabase instance;
